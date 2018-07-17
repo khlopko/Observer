@@ -21,6 +21,10 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		4437A2AF20FEA9E800F8F47C /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4437A2AE20FEA9E800F8F47C /* Subject.swift */; };
+		4437A2B120FEAA0900F8F47C /* SubjectEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4437A2B020FEAA0900F8F47C /* SubjectEvent.swift */; };
+		4437A2B320FEAA1B00F8F47C /* SubjectContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4437A2B220FEAA1B00F8F47C /* SubjectContainer.swift */; };
+		4437A2B520FEAA2900F8F47C /* SetBasedSubjectStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4437A2B420FEAA2900F8F47C /* SetBasedSubjectStrategy.swift */; };
 		A629C5B320F0F7B900FEC183 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A629C5B220F0F7B900FEC183 /* Observer.swift */; };
 		OBJ_29 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_40 /* ObserverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* ObserverTests.swift */; };
@@ -46,6 +50,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4437A2AE20FEA9E800F8F47C /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
+		4437A2B020FEAA0900F8F47C /* SubjectEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectEvent.swift; sourceTree = "<group>"; };
+		4437A2B220FEAA1B00F8F47C /* SubjectContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectContainer.swift; sourceTree = "<group>"; };
+		4437A2B420FEAA2900F8F47C /* SetBasedSubjectStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetBasedSubjectStrategy.swift; sourceTree = "<group>"; };
 		A629C5B220F0F7B900FEC183 /* Observer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Observer.swift; path = Sources/Observer.swift; sourceTree = "<group>"; };
 		OBJ_12 /* ObserverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverTests.swift; sourceTree = "<group>"; };
 		OBJ_13 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
@@ -100,7 +108,7 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -108,13 +116,16 @@
 				OBJ_10 /* Tests */,
 				OBJ_14 /* Products */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				A629C5B220F0F7B900FEC183 /* Observer.swift */,
+				4437A2B420FEAA2900F8F47C /* SetBasedSubjectStrategy.swift */,
+				4437A2AE20FEA9E800F8F47C /* Subject.swift */,
+				4437A2B220FEAA1B00F8F47C /* SubjectContainer.swift */,
+				4437A2B020FEAA0900F8F47C /* SubjectEvent.swift */,
 			);
 			name = Sources;
 			sourceTree = SOURCE_ROOT;
@@ -189,7 +200,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_14 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -207,7 +218,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				4437A2B320FEAA1B00F8F47C /* SubjectContainer.swift in Sources */,
+				4437A2AF20FEA9E800F8F47C /* Subject.swift in Sources */,
+				4437A2B120FEAA0900F8F47C /* SubjectEvent.swift in Sources */,
 				A629C5B320F0F7B900FEC183 /* Observer.swift in Sources */,
+				4437A2B520FEAA2900F8F47C /* SetBasedSubjectStrategy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

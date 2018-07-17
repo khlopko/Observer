@@ -1,7 +1,7 @@
 import XCTest
 @testable import Observer
 
-final class ObserverTests: XCTestCase {
+final class ObserverTests : XCTestCase {
     
     func testNotify() {
         let subject = ASubject()
@@ -12,6 +12,30 @@ final class ObserverTests: XCTestCase {
         XCTAssert(observer.processedEvent is Event)
     }
 
+    func testRemoveNilObservers() {
+        let subject = ASubject()
+        var observer: Observer? = AObserver()
+        subject.attach(observer!)
+        observer = nil
+        subject.fireEvent()
+        let setBasedStrategy = subject.subjectStrategy as! SetBasedSubjectStrategy
+        XCTAssertTrue(setBasedStrategy.observers.isEmpty)
+    }
+
+    func testSameInstanceReferenceSame() {
+        let observer = AObserver()
+        let ref1 = WeakReference<AObserver>(object: observer)
+        let ref2 = WeakReference<AObserver>(object: observer)
+        XCTAssertEqual(ref1, ref2)
+    }
+
+    func testDifferentInstanceOfOneTypeDifferent() {
+        let observer1 = AObserver()
+        let ref1 = WeakReference<AObserver>(object: observer1)
+        let observer2 = AObserver()
+        let ref2 = WeakReference<AObserver>(object: observer2)
+        XCTAssertNotEqual(ref1, ref2)
+    }
 
     static var allTests = [
         ("testNotify", testNotify),
